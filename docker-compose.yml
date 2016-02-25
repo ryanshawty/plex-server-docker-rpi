@@ -1,14 +1,14 @@
 # Plex server
 plex:
   container_name: plex
-  image: greensheep/plex-server-docker-rpi:0.9.15.6
+  image: ryanshaw/plex-server-docker-rpi:0.9.15.6
   net: "host"
   ports:
    - 32400:32400
   restart: always
   volumes:
-   - /home/pi/plex/config:/config
-   - /home/pi/plex/data:/data
+   - /home/ryan/plex/config:/config
+   - /mnt/hdd:/data
 
 # Share plex data volume as Samba share
 samba-server:
